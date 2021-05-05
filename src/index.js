@@ -20,7 +20,7 @@ if(value !=="")
 };
 
 return(
-    <div>
+    <div style ={{marginTop:10}}>
     <form onSubmit={handleSubmit}>
         <input type="text" placeholder="enter new work" value={value} onChange={(e)=>newWork(e.target.value)} />
         <button type="submit" id="remove"><i class="material-icons">add</i></button>
@@ -31,25 +31,21 @@ return(
 
 const TotalTasks = ()=>{
 
-    const addTask = (text)=>  {
-        alert("iam "+text)
-       updateTasks([...tasks, {text}]);        
-   }
+    const addTask = (work)=>  updateTasks([...tasks, {work}]); 
+      
+   
   
     const [tasks,updateTasks] = useState([
         {
-            work:"eating",
-            
+            work:"eating",            
             finished:false
         },
         {
-            work:"walking",
-            
+            work:"walking",            
             finished:false
         },
         {
-            work:"job",
-            
+            work:"job",            
             finished:false
         }
     ]);
