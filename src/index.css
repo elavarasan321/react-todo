@@ -11,14 +11,9 @@ h1{
   color: #000;
   font-size: 4rem;
 }
-.each-task{
-  text-align: center;
-  padding : 5px;
-  font-weight: bolder;
-}
+
 .task-list{
-  width:500px;
- 
+  width:400px; 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   letter-spacing: 3px;
   text-transform: capitalize;
@@ -32,6 +27,9 @@ h1{
 }
 .each-task
 {
+ 
+    text-align: center;
+    font-weight: bolder;
   border-radius: 10px;
   padding:10px;
   background-color: black;
@@ -56,6 +54,17 @@ input[type="text"]
   border-radius: 10px;
   border:none;
   margin-right: 10px;
+}
+#date{
+  font-size: 15px;
+  color: #f7797d;
+  text-align: center;
+
+}
+#time{
+  font-size: 15px;
+  color: #f7797d;
+  padding-left: 15px;
 }
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -30,22 +30,33 @@ return(
     }; 
 
 const TotalTasks = ()=>{
+    let d = new Date();
+    let date = d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear();
+   let time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
 
-    const addTask = (work)=>  updateTasks([...tasks, {work}]); 
-      
+    const addTask = (work)=> { 
+
+        updateTasks([...tasks, {work:work,date:date,time:time,finished:false}])
+    };     
    
   
     const [tasks,updateTasks] = useState([
         {
-            work:"eating",            
+            work:"eating", 
+            date:  date, 
+            time: time,  
             finished:false
         },
         {
-            work:"walking",            
+            work:"walking",  
+            date:  date, 
+            time: time,            
             finished:false
         },
         {
-            work:"job",            
+            work:"job", 
+            date:  date, 
+            time: time,             
             finished:false
         }
     ]);
@@ -77,6 +88,12 @@ updateTasks(select);
                   <div className="each-task">
                       <span onClick={()=>Toggle(index)} className={task.finished?"task-name completed-task":"task-name"}>                     
                       {task.work}
+                      <div id="date">
+                      {task.date}
+                      </div>
+                      <div id="time">
+                      {task.time}
+                      </div>
                       </span>
                       <button id="remove" onClick={()=>removeWork(index)}><i class="material-icons">delete</i></button>
                 </div>
